@@ -15,3 +15,4 @@ noImplicitAny = 모든 타입에 대해서 기본적인 타입이라도 넣어�
 */
 
 // @ts-check
+// https://www.typescriptlang.org/docs/handbook/compiler-options.html
