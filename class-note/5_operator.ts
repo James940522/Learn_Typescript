@@ -19,5 +19,20 @@ function logMessage(value: string | number) {
 
 logMessage('hello');
 logMessage(100);
-logMessage(false);
+// logMessage(false);
 // logMessage(['FDSF'])
+
+interface Developer {
+    name: string;
+}
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+function askSomeone(someone: Developer | Person) {
+    someone.name;
+}
+
+// 유니온타입으로 인터페이스를 했을때는 공통된 속성만이 사용 가능하다 따로따로 타입가드를 써줘야 에러가 발생하지 않음
