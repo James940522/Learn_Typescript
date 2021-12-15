@@ -31,8 +31,12 @@ interface Person {
     age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
+function askSomeone(someone: Developer & Person) {
     someone.name;
+    someone.age;
 }
-
 // 유니온타입으로 인터페이스를 했을때는 공통된 속성만이 사용 가능하다 따로따로 타입가드를 써줘야 에러가 발생하지 않음
+
+//인터섹션
+let capt: string & number & boolean; // <-never라고 뜨는데 string number boolean 타입이 동시에 적용되지 않기때문
+
