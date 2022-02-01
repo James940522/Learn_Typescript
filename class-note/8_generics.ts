@@ -19,10 +19,9 @@ interface Dropdown<T> {
 const obj: Dropdown<string> = { value: "하이", selected: true };
 
 // 제네릭의 타입 제한
-function logTextLength<T>(text: T[]) {
-  // console.log(text.length)
-
-  return `${text.length}`;
+function logTextLength<T>(text: T[]): T[] {
+  console.log(text.length);
+  return text;
 }
 
-logTextLength(["hi", "hello"]);
+logTextLength<string>(["hi", "hello"]);
