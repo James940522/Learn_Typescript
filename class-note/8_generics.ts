@@ -9,3 +9,20 @@ function logText<T>(text: T): T {
   return text;
 }
 logText<string>("ㅎㅏ이");
+
+//interface 제네릭
+interface Dropdown<T> {
+  value: T;
+  selected: boolean;
+}
+
+const obj: Dropdown<string> = { value: "하이", selected: true };
+
+// 제네릭의 타입 제한
+function logTextLength<T>(text: T[]) {
+  // console.log(text.length)
+
+  return `${text.length}`;
+}
+
+logTextLength(["hi", "hello"]);
